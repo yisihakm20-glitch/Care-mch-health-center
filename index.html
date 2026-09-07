@@ -792,10 +792,10 @@
                         <div class="schedule-box">
     <div class="day-badge">Working Days</div>
     <div class="day-list">Monday – Saturday</div>
-    <div class="time-slot morning">☀️ Mon–Fri Morning: 9:00 AM – 1:00 PM</div>
-    <div class="time-slot afternoon">🌤️ Mon–Fri Afternoon: 2:00 PM – 5:00 PM</div>
-    <div class="time-slot morning">☀️ Saturday Morning: 8:00 AM – 12:00 PM</div>
-    <div class="time-slot afternoon">🌤️ Saturday Afternoon: 1:00 PM – 5:00 PM</div>
+    <div class="time-slot morning">☀️ Morning: 9:00 AM – 1:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Afternoon: 2:00 PM – 5:00 PM</div>
+    <div class="time-slot morning">☀️ Sat Morning: 8:00 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Sat Afternoon: 1:00 PM – 5:00 PM</div>
 </div>
                     </div>
                 </div>
@@ -809,9 +809,9 @@
                         <div class="schedule-box">
     <div class="day-badge">Working Days</div>
     <div class="day-list">Monday – Saturday</div>
-    <div class="time-slot morning">☀️ Mon–Fri Morning: 8:30 AM – 12:00 PM</div>
-    <div class="time-slot afternoon">🌤️ Mon–Fri Afternoon: 1:00 PM – 5:00 PM</div>
-    <div class="time-slot morning">☀️ Saturday Morning: 9:00 AM – 1:00 PM</div>
+    <div class="time-slot morning">☀️ Morning: 8:30 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Afternoon: 1:00 PM – 5:00 PM</div>
+    <div class="time-slot morning">☀️ Sat Morning: 9:00 AM – 1:00 PM</div>
 </div>
                     </div>
                 </div>
@@ -1010,17 +1010,18 @@
 
     function startAutoScroll() {
         autoScrollInterval = setInterval(() => {
-            if (!isPaused) {
-                // FIXED: Use subtraction (-) instead of addition (+) between scrollWidth and clientWidth
+            if (!isPaused && carousel) {
+                // Check if scroll reached the end (with a 10px buffer for mobile display precision)
                 if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
-                    carousel.scrollLeft = 0; // Rotates back to the beginning!
+                    carousel.scrollLeft = 0; // Seamlessly jump back to the first doctor card
                 } else {
-                    carousel.scrollLeft += 2;
+                    carousel.scrollLeft += 2; // Step forward smoothly
                 }
             }
         }, 20);
     }
 
+    // Pause auto-scrolling when user interacts with or touches the carousel
     carousel.addEventListener('mouseenter', () => isPaused = true);
     carousel.addEventListener('mouseleave', () => isPaused = false);
     carousel.addEventListener('touchstart', () => isPaused = true);
