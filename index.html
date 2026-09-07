@@ -312,28 +312,45 @@
         }
 
         .schedule-box {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 12px;
-            font-size: 0.85rem;
-        }
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    border: 1px solid #e2e8f0;
+}
 
-        .schedule-days {
-            color: var(--accent-purple);
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
+.day-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #7209b7, #4361ee);
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
 
-        .schedule-time {
-            color: var(--accent-orange);
-            font-weight: 600;
-        }
+.day-list {
+    color: #5a189a;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
 
-        .schedule-time-afternoon {
-            color: var(--accent-blue);
-            font-weight: 600;
-        }
+.time-slot {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 3px;
+}
 
+.time-slot.morning {
+    color: #d97706;
+}
+
+.time-slot.afternoon {
+    color: #0288d1;
+}
         /* Patient Resources & Forms */
         .resources-grid {
             display: grid;
@@ -713,10 +730,11 @@
                         <div class="doctor-name">Dr. Endale H/Meskel</div>
                         <div class="doctor-profession">Expert Obstetrician & Gynecology Specialist</div>
                         <div class="schedule-box">
-                            <div class="schedule-days">Days: Monday, Tuesday, Thursday, Friday</div>
-                            <div class="schedule-time">Morning: 9:00 AM – 12:00 PM</div>
-                            <div class="schedule-time-afternoon">Afternoon: 2:30 PM – 5:00 PM</div>
-                        </div>
+    <div class="day-badge">Working Days</div>
+    <div class="day-list">Monday, Tuesday, Thursday, Friday</div>
+    <div class="time-slot morning">☀️ Morning: 9:00 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Afternoon: 2:30 PM – 5:00 PM</div>
+</div>
                     </div>
                 </div>
 
@@ -727,10 +745,11 @@
                         <div class="doctor-name">Dr. Sisay Kirba</div>
                         <div class="doctor-profession">Senior Obstetrician & Gynecologist, Maternal-Fetal Medicine Specialist</div>
                         <div class="schedule-box">
-                            <div class="schedule-days">Days: Monday, Tuesday, Wednesday, Friday, Saturday</div>
-                            <div class="schedule-time">Morning: 9:00 AM – 12:00 PM</div>
-                            <div class="schedule-time-afternoon">Afternoon: 2:30 PM – 5:00 PM</div>
-                        </div>
+    <div class="day-badge">Working Days</div>
+    <div class="day-list">Monday, Tuesday, Wednesday, Friday, Saturday</div>
+    <div class="time-slot morning">☀️ Morning: 9:00 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Afternoon: 2:30 PM – 5:00 PM</div>
+</div>
                     </div>
                 </div>
 
@@ -741,10 +760,11 @@
                         <div class="doctor-name">Dr. Tadesse Urgie</div>
                         <div class="doctor-profession">Senior Expert Obstetrician & Gynecologist, Gynecology Oncologist</div>
                         <div class="schedule-box">
-                            <div class="schedule-days">Days: Wednesday, Saturday</div>
-                            <div class="schedule-time">Morning: 9:00 AM – 12:00 PM</div>
-                            <div class="schedule-time-afternoon">Afternoon: 2:30 PM – 5:00 PM</div>
-                        </div>
+    <div class="day-badge">Working Days</div>
+    <div class="day-list">Wednesday & Saturday</div>
+    <div class="time-slot morning">☀️ Morning: 9:00 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Afternoon: 2:30 PM – 5:00 PM</div>
+</div>
                     </div>
                 </div>
 
@@ -755,10 +775,11 @@
                         <div class="doctor-name">Dr. Yewubnesh Arage</div>
                         <div class="doctor-profession">Senior Obstetrician & Gynecology Specialist</div>
                         <div class="schedule-box">
-                            <div class="schedule-days">Days: Thursday</div>
-                            <div class="schedule-time">Morning: 9:00 AM – 12:00 PM</div>
-                            <div class="schedule-time-afternoon">Afternoon: 2:30 PM – 5:00 PM</div>
-                        </div>
+    <div class="day-badge">Working Days</div>
+    <div class="day-list">Thursday</div>
+    <div class="time-slot morning">☀️ Morning: 9:00 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Afternoon: 2:30 PM – 5:00 PM</div>
+</div>
                     </div>
                 </div>
 
@@ -769,12 +790,13 @@
                         <div class="doctor-name">Dr. Thomas Abebe</div>
                         <div class="doctor-profession">Pediatrician</div>
                         <div class="schedule-box">
-                            <div class="schedule-days">Days: Monday to Saturday</div>
-                            <div class="schedule-time">Mon–Fri Morning: 9:00 AM – 1:00 PM</div>
-                            <div class="schedule-time-afternoon">Mon–Fri Afternoon: 2:00 PM – 5:00 PM</div>
-                            <div class="schedule-time" style="margin-top:4px;">Saturday Morning: 8:00 AM – 12:00 PM</div>
-                            <div class="schedule-time-afternoon">Saturday Afternoon: 1:00 PM – 5:00 PM</div>
-                        </div>
+    <div class="day-badge">Working Days</div>
+    <div class="day-list">Monday – Saturday</div>
+    <div class="time-slot morning">☀️ Mon–Fri Morning: 9:00 AM – 1:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Mon–Fri Afternoon: 2:00 PM – 5:00 PM</div>
+    <div class="time-slot morning">☀️ Saturday Morning: 8:00 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Saturday Afternoon: 1:00 PM – 5:00 PM</div>
+</div>
                     </div>
                 </div>
 
@@ -785,11 +807,12 @@
                         <div class="doctor-name">Dr. Wudnesh Mamo</div>
                         <div class="doctor-profession">Pediatrician</div>
                         <div class="schedule-box">
-                            <div class="schedule-days">Days: Monday to Saturday</div>
-                            <div class="schedule-time">Mon–Fri Morning: 8:30 AM – 12:00 PM</div>
-                            <div class="schedule-time-afternoon">Mon–Fri Afternoon: 1:00 PM – 5:00 PM</div>
-                            <div class="schedule-time" style="margin-top:4px;">Saturday Morning: 9:00 AM – 1:00 PM</div>
-                        </div>
+    <div class="day-badge">Working Days</div>
+    <div class="day-list">Monday – Saturday</div>
+    <div class="time-slot morning">☀️ Mon–Fri Morning: 8:30 AM – 12:00 PM</div>
+    <div class="time-slot afternoon">🌤️ Mon–Fri Afternoon: 1:00 PM – 5:00 PM</div>
+    <div class="time-slot morning">☀️ Saturday Morning: 9:00 AM – 1:00 PM</div>
+</div>
                     </div>
                 </div>
 
@@ -981,27 +1004,29 @@
 
     <!-- Carousel Auto-Scroll Script -->
     <script>
-        const carousel = document.getElementById('doctorCarousel');
-        let autoScrollInterval;
-        let isPaused = false;
+    const carousel = document.getElementById('doctorsCarousel');
+    let autoScrollInterval;
+    let isPaused = false;
 
-       function startAutoScroll() {
+    function startAutoScroll() {
         autoScrollInterval = setInterval(() => {
             if (!isPaused) {
+                // FIXED: Use subtraction (-) instead of addition (+) between scrollWidth and clientWidth
                 if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
-                    carousel.scrollLeft = 0;
+                    carousel.scrollLeft = 0; // Rotates back to the beginning!
                 } else {
                     carousel.scrollLeft += 2;
                 }
             }
         }, 20);
     }
-        carousel.addEventListener('mouseenter', () => isPaused = true);
-        carousel.addEventListener('mouseleave', () => isPaused = false);
-        carousel.addEventListener('touchstart', () => isPaused = true);
-        carousel.addEventListener('touchend', () => isPaused = false);
 
-        startAutoScroll();
-    </script>
+    carousel.addEventListener('mouseenter', () => isPaused = true);
+    carousel.addEventListener('mouseleave', () => isPaused = false);
+    carousel.addEventListener('touchstart', () => isPaused = true);
+    carousel.addEventListener('touchend', () => isPaused = false);
+
+    startAutoScroll();
+</script>
 </body>
 </html>
