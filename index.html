@@ -1001,31 +1001,30 @@
             &copy; 2026 Care Maternal and Child Health Centre. All Rights Reserved.
         </div>
     </footer>
-<!-- Carousel Auto-Scroll Script -->
-<script>
-    const carousel = document.getElementById('doctorsCarousel');
-    let isPaused = false;
+ <!-- Carousel Auto-Scroll Script -->
+    <script>
+        const carousel = document.getElementById('doctorCarousel');
+        let autoScrollInterval;
+        let isPaused = false;
 
-    function autoScroll() {
-        if (!isPaused && carousel) {
-            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5) {
-                carousel.scrollLeft = 0;
-            } else {
-                carousel.scrollLeft += 1;
-            }
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                if (!isPaused) {
+                    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5) {
+                        carousel.scrollLeft = 0;
+                    } else {
+                        carousel.scrollBy({ left: 1, behavior: 'smooth' });
+                    }
+                }
+            }, 20);
         }
-        requestAnimationFrame(autoScroll);
-    }
-
-    if (carousel) {
-        requestAnimationFrame(autoScroll);
 
         carousel.addEventListener('mouseenter', () => isPaused = true);
         carousel.addEventListener('mouseleave', () => isPaused = false);
         carousel.addEventListener('touchstart', () => isPaused = true);
         carousel.addEventListener('touchend', () => isPaused = false);
-    }
-</script>
 
+        startAutoScroll();
+    </script>
 </body>
 </html>
