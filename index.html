@@ -851,7 +851,7 @@
             <div class="form-box">
                 <h3 style="color:var(--dark); margin-bottom: 20px;">Online Appointment Booking</h3>
                 <form action="https://formsubmit.co/yisihakm20@gmail.com" method="POST">
-                    <form action="https://formsubmit.co/Yisihakm20@gmail.com" method="POST" onsubmit="alert('Thank you for booking! Please arrive on time to keep your reservation.');">
+                    <form action="https://formsubmit.co/Yisihakm20@gmail.com" method="POST" onsubmit="event.preventDefault(); fetch(this.action, { method: 'POST', body: new FormData(this) }).then(() => { alert('Thank you for booking! Please arrive on time to keep your reservation.'); this.reset(); });">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
                         <label>Patient Full Name</label>
